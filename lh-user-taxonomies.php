@@ -587,19 +587,19 @@ $terms = get_terms( $taxonomy->name, array('hide_empty' => false ) );
 		add_filter('parent_file', array($this, 'parent_menu'));
 		
 		// User Profiles
-		add_action('show_user_profile',	array($this, 'user_profile'));
-		add_action('edit_user_profile',	array($this, 'user_profile'));
-		add_action('personal_options_update', array($this, 'save_profile'));
-		add_action('edit_user_profile_update', array($this, 'save_profile'));
+//		add_action('show_user_profile',	array($this, 'user_profile'));
+//		add_action('edit_user_profile',	array($this, 'user_profile'));
+//		add_action('personal_options_update', array($this, 'save_profile'));
+//		add_action('edit_user_profile_update', array($this, 'save_profile'));
 		add_action('user_register', array($this, 'save_profile'));
 		add_filter('sanitize_user', array($this, 'restrict_username'));
-		add_filter('manage_users_columns', array($this, 'lh_user_taxonomies_add_user_id_column'));
-		add_action('manage_users_custom_column', array($this, 'lh_user_taxonomies_add_taxonomy_column_content'), 10, 3);
+//		add_filter('manage_users_columns', array($this, 'lh_user_taxonomies_add_user_id_column'));
+//		add_action('manage_users_custom_column', array($this, 'lh_user_taxonomies_add_taxonomy_column_content'), 10, 3);
                 add_action('pre_user_query', array($this, 'user_query'));
 
 		// Bulk edit
-		add_filter( 'views_users', array( $this, 'bulk_edit') );
-		add_action( 'admin_init',  array( $this, 'bulk_edit_action' ) );
+//		add_filter( 'views_users', array( $this, 'bulk_edit') );
+//		add_action( 'admin_init',  array( $this, 'bulk_edit_action' ) );
 	}
 
 
